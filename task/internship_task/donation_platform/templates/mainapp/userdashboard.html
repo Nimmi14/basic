@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<h2>NayePankh Foundation</h2>
+
+{% if donar %}
+    <div>
+        <h5>Welcome, {{ donar.username }}! Thank you for joining NayePankh Foundation. Please donate and make a change.</h5>
+    </div>
+    <hr>
+<!--{% else %}-->
+<!--    <p>No donor information found. Please log in to continue.</p>-->
+{% endif %}
+
+
+<br>
+<br>
+<div class="container" align="left">
+    <div class="column">
+        <div class="text-left">
+            <h4><strong>Dashboard</strong></h4><br>
+            <!-- Dashboard Section -->
+    <div class="container">
+        <div class="row">
+            <div class="goal-achieved-section">
+    <h4>Goals Achieved</h4>
+    <div class="goal-card">
+        <p><strong>Fundraising Goal: </strong> <span class="goal-progress-text">80%</span></p>
+        <div class="progress-bar">
+            <div class="progress-bar-filled" style="width: 80%;"></div>
+        </div>
+    </div>
+            </div>
+                <br><br>
+
+
+
+            <!-- Share to WhatsApp -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Share to WhatsApp</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Share your donation link with friends and family!</p>
+                                    <a href="https://wa.me/?text=Hi%2C%20I%20am%20raising%20funds%20for%20NayePankh%20Foundation.%20Please%20support%20me%20by%20donating%20through%20this%20link%20{{ donar.donation_link }}%20and%20make%20a%20difference%21" target="_blank" class="btn btn-success">Share on WhatsApp</a>
+
+<!--                        <a href="https://wa.me/?text={{ donar.donation_link }}" target="_blank" class="btn btn-success">Share on WhatsApp</a>-->
+                    </div>
+                </div>
+            </div>
+<br>
+                <br>
+            <!-- Referral Code -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Referral Code</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Your unique referral code: <strong>{{ donar.referral_code }}</strong></p>
+                        <p>Share this code with others to get rewards!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <br>
+        <br>
+
+            <h4><strong>Transaction details</strong></h4>
+            <h5> For trasanction deatils to be displayed we need online payment gateway we can use paytm gateway.ps currently not implemented.</h5>
+        </div>
+    </div>
+</div>
+<br>
+
+          <a href="{% url "home" %}" class = "btn btn-success">HOME</a>
+
+{% endblock content %}
+
+{% url "dform" %}
+href="{% url "dlogin" %}"
+<h4 class="text-center alert alert-warning">Donor management</h4>

@@ -1,0 +1,55 @@
+<!-- doctorform.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+<!--   body{-->
+<!--    background-color:lightblue; /* Set background color for the entire page */-->
+<!--    color: white; /* Adjust text color for contrast */-->
+<!--  }-->
+  .custom-alert {
+    font-size: 15px; /* Adjust font size */
+    padding: 15px;    /* Adjust padding */
+    border-radius: 3px; /* Adjust border rounding */
+  }
+  .message-text {
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .container mt-5{
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 300px;
+      }
+
+</style>
+
+<div class="container mt-5">
+  <div class="row">
+    <!-- Left Column (Signup Form) -->
+    <div class="col-md-6">
+      <h2 class="text-center alert alert-info custom-alert">Donor Signup</h2>
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary mt-3">Sign Up</button>
+      </form>
+      <br>
+      <h6>Already have an Account ..? <a href={% url "ulogin" %}>Login</a></h6>
+
+    </div>
+
+    <!-- Right Column (Message) -->
+    <div class="col-md-6 d-flex align-items-center justify-content-end">
+      <div class="message-text">
+        <h3>"Together, we can make an even greater difference. Thank you for joining us in this journey!"</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

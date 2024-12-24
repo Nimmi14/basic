@@ -1,0 +1,69 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Donar management system..</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>Welcome to donar management system ... Username </h1>-->
+
+<!--</body>-->
+<!--</html>-->
+<!-- templates/webapp/patientform.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Donor management{% endblock title %}
+
+{% block content %}
+{% load static %}
+<header>
+    <h2 style="text-align: left; color: black;"><strong>NayePankh Foundation</strong></h2>
+    <nav style="float: right;">
+            <a href="{% url "ulogin" %}"style="color: black; text-decoration: none; margin-right: 15px; font-size: 16px; padding: 8px 15px; border-radius: 5px;">Login</a>
+        <a href={% url "uform" %} style="color: black; text-decoration: none; margin-right: 15px; font-size: 16px; padding: 8px 15px; border-radius: 5px;">SignUp</a>
+
+        <br>
+        </nav>
+</header>
+<body style= "background-color: lavender; font-family: Arial, sans-serif; background-image: url('{% static "images/donate.jpg" %}'); background-size: contain; background-repeat: no-repeat;background-position: center; height: 100vh; margin: 5; ">
+<br>
+<!--    <h2 style="text-align: left; color: lavender;"><strong>NayePankh Foundation</strong></h2>-->
+<!--    <nav style="float: right;">-->
+<!--            <a href="{% url "ulogin" %}"style="color: black; text-decoration: none; margin-right: 15px; font-size: 16px; padding: 8px 15px; border-radius: 5px;">Login</a>-->
+<!--        <a href={% url "uform" %} style="color: black; text-decoration: none; margin-right: 15px; font-size: 16px; padding: 8px 15px; border-radius: 5px;">SignUp</a>-->
+
+<!--        <br>-->
+<!--        </nav>-->
+
+<!---->
+
+</body>
+<!--<footer style="background-color: black; color: white; text-align: center; padding: 10px 0; position: relative; bottom: 0; width: 100%;">-->
+<!--    <p><strong>Contact Us</strong></p>-->
+<!--    <p>Email: contact@nayepankhfoundation.org</p>-->
+<!--    <p>Phone: +1 123-456-7890</p>-->
+<!--    <p>Address: 123 Charity Lane, Kindness City, USA</p>-->
+<!--    <p>&copy; 2024 NayePankh Foundation. All rights reserved.</p>-->
+<!--</footer>-->
+
+
+
+
+{% endblock content %}
+
+
+<!--<div class="container" align="left">-->
+<!--    <h4 class = "text-center alert alert-warning">Donor management</h4>-->
+<!--    <div class="coloumn">-->
+<!--    <div class="text-left">-->
+<!--    <a href="{% url "pform" %}" class = "btn btn-warning">Dash board</a><br> <br>-->
+<!--    <a href="{% url "plogin" %}" class = "btn btn-warning">Transaction details</a>-->
+<!--    <a href="{% url "dform" %}" class = "btn btn-warning" >doctor form</a>-->
+<!--    <a href="{% url "dlogin" %}" class = "btn btn-warning">doctor login</a>-->
+<!--</div>-->
+<!--</div>-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+<!--            <a href="{% url "ulogin" %}" style="color: white; text-decoration: none; margin-right: 15px; font-size: 16px; padding: 8px 15px;  border-radius: 5px;">Login</a>-->
+
